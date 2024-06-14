@@ -6,17 +6,15 @@ export default {
   ],
   theme: {
     extend: {
+      minHeight: {
+        '600': '600px',
+      },
       fontFamily: {
-        sans: ['Arial', 'sans-serif'],
-        accent: ['RobotoCondensed', 'Arial', 'sans-serif']
+        sans: ['Poppins', 'sans-serif'],
+        accent: ['BebasNeue', 'sans-serif'],
       },
       colors: {
-        'header-bg': '#111115',
-      },
-      dropShadow: {
-        'black': [
-          '0 2px 4px rgba(0, 0, 0, 1)',
-          '0 10px 40px rgba(0, 0, 0, 0.4)'],
+        'main-dark': '#111115',
       },
       transitionDuration: {
         '2500': '2500ms',

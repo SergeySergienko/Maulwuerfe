@@ -2,31 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  @font-face {
-    font-family: 'RobotoCondensed';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('./assets/fonts/RobotoCondensed-Regular.ttf') format('ttf');
-  }
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
+}
 
-  @font-face {
-    font-family: 'RobotoCondensed';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url('./assets/fonts/RobotoCondensed-Bold.ttf') format('ttf');
-  }
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./assets/fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BebasNeue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/fonts/BebasNeue-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BebasNeue';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./assets/fonts/BebasNeue-Bold.ttf') format('truetype');
 }
 
 @layer components {
   .btn-primary {
-    @apply py-3 px-9 bg-red-600 text-white rounded-full shadow-xl hover:bg-white hover:text-black focus:outline-none transition-all;
+    @apply py-3 px-9 bg-red-600 text-white rounded-full shadow-xl hover:bg-white hover:text-black hover:shadow-none focus:outline-none transition-all;
+  }
+
+  .btn-primary-2 {
+    @apply py-3 px-9 bg-red-600 text-white rounded-full shadow-xl hover:bg-main-dark hover:shadow-none focus:outline-none transition-all;
   }
 }
 
 @layer utilities {
+  .external-container {
+    @apply max-w-7xl mx-auto px-2 sm:px-6 lg:px-8;
+  }
+
   .input-search-reset {
     @apply border-none bg-transparent outline-none focus:outline-none focus:ring-0 placeholder-transparent appearance-none;
   }
@@ -37,4 +59,25 @@
   input[type="search"]::-webkit-search-results-decoration {
     -webkit-appearance: none;
   }
+}
+
+.slick-arrow {
+  @apply z-10 transition-all opacity-30 hover:opacity-80;
+}
+
+.slick-arrow:before {
+  @apply text-4xl text-main-dark;
+}
+
+/* .slick-prev,
+.slick-next {
+  @apply top-auto bottom-7;
+} */
+
+.slick-prev {
+  @apply left-0;
+}
+
+.slick-next {
+  @apply right-4;
 }
