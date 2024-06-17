@@ -36,7 +36,7 @@
 
 @layer components {
   .btn-primary {
-    @apply py-3 px-9 bg-red-600 text-white rounded-full shadow-xl hover:bg-white hover:text-black hover:shadow-none focus:outline-none transition-all;
+    @apply py-3 px-9 bg-red-700 text-white rounded-full shadow-xl hover:bg-white hover:text-black hover:shadow-none focus:outline-none transition-all;
   }
 
   .btn-primary-2 {
@@ -53,10 +53,10 @@
     @apply border-none bg-transparent outline-none focus:outline-none focus:ring-0 placeholder-transparent appearance-none;
   }
 
-  input[type="search"]::-webkit-search-decoration,
-  input[type="search"]::-webkit-search-cancel-button,
-  input[type="search"]::-webkit-search-results-button,
-  input[type="search"]::-webkit-search-results-decoration {
+  input[type='search']::-webkit-search-decoration,
+  input[type='search']::-webkit-search-cancel-button,
+  input[type='search']::-webkit-search-results-button,
+  input[type='search']::-webkit-search-results-decoration {
     -webkit-appearance: none;
   }
 }

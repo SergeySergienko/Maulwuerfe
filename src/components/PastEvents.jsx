@@ -5,26 +5,30 @@ import EventCard from './EventCard';
 const PastEvents = ({ pastEvents }) => {
   const [showAllPastEvents, setShowAllPastEvents] = useState(false);
 
-  let shownEvents = pastEvents;
+  const reversedPastEvents = pastEvents
+    .slice(0, pastEvents.length - 1)
+    .reverse();
+
+  let shownEvents = reversedPastEvents;
 
   if (!showAllPastEvents) {
-    shownEvents = pastEvents.slice(0, 3);
+    shownEvents = reversedPastEvents.slice(0, 3);
   }
 
   return (
-    <div className="bg-slate-100">
-      <div className="external-container py-8">
-        <h2 className="mb-4 text-center font-accent tracking-widest font-bold">
-          <p className="text-lg text-red-600">Gallery of</p>
-          <p className="text-4xl">our past events</p>
+    <div className='bg-slate-100'>
+      <div className='external-container py-8'>
+        <h2 className='mb-4 text-center font-accent tracking-widest font-bold'>
+          <p className='text-lg text-red-600'>Gallery of</p>
+          <p className='text-4xl'>our past events</p>
         </h2>
-        <div className="mb-6">
+        <div className='mb-6'>
           {shownEvents.map((event, index) => (
             <EventCard key={index} event={event} />
           ))}
         </div>
         <button
-          className="block btn-primary-2 mx-auto"
+          className='block btn-primary-2 mx-auto'
           onClick={() => setShowAllPastEvents((prevState) => !prevState)}
         >
           {showAllPastEvents ? 'Show less events' : 'Show more events'}
