@@ -1,38 +1,51 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import EventCard from './EventCard';
+import { Link } from 'react-router-dom';
+import EventCardCover from './EventCardCover';
 
-const PastEvents = ({ pastEvents }) => {
-  const [showAllPastEvents, setShowAllPastEvents] = useState(false);
+const PastEvents = ({ pastEvents, showAllEvents = false }) => {
+  const [visibleCount, setVisibleCount] = useState(6);
 
-  const reversedPastEvents = pastEvents
-    .slice(0, pastEvents.length - 1)
-    .reverse();
+  const eventsToShow = showAllEvents
+    ? pastEvents.slice().reverse()
+    : pastEvents.slice(0, 3).reverse();
 
-  let shownEvents = reversedPastEvents;
-
-  if (!showAllPastEvents) {
-    shownEvents = reversedPastEvents.slice(0, 3);
-  }
+  const loadMoreEvents = () => {
+    setVisibleCount((prevCount) => prevCount + 6);
+  };
 
   return (
-    <div className='bg-slate-100'>
-      <div className='external-container py-8'>
-        <h2 className='mb-4 text-center font-accent tracking-widest font-bold'>
-          <p className='text-lg text-red-600'>Gallery of</p>
-          <p className='text-4xl'>our past events</p>
-        </h2>
-        <div className='mb-6'>
-          {shownEvents.map((event, index) => (
-            <EventCard key={index} event={event} />
+    <div className='bg-main-dark/10'>
+      <div className='external-container py-10 sm:py-16 lg:py-20'>
+        {!showAllEvents && (
+          <h2 className='mb-4 text-center font-accent tracking-widest font-bold'>
+            <p className='text-lg text-red-600'>Gallery of</p>
+            <p className='text-4xl'>our past events</p>
+          </h2>
+        )}
+        <div className='mb-10'>
+          {eventsToShow.slice(0, visibleCount).map((event, index) => (
+            <EventCardCover key={index} event={event} />
           ))}
         </div>
-        <button
-          className='block btn-primary-2 mx-auto'
-          onClick={() => setShowAllPastEvents((prevState) => !prevState)}
-        >
-          {showAllPastEvents ? 'Show less events' : 'Show more events'}
-        </button>
+        {!showAllEvents ? (
+          <Link to='/events'>
+            <button className='block btn-primary-2 mx-auto'>
+              Show all events
+            </button>
+          </Link>
+        ) : (
+          visibleCount < eventsToShow.length && (
+            <div className='text-center'>
+              <button
+                className='block btn-primary-2 mx-auto'
+                onClick={loadMoreEvents}
+              >
+                Show more events
+              </button>
+            </div>
+          )
+        )}
       </div>
     </div>
   );
@@ -51,6 +64,7 @@ PastEvents.propTypes = {
       photosFormat: PropTypes.string.isRequired,
     })
   ).isRequired,
+  showAllEvents: PropTypes.bool,
 };
 
 export default PastEvents;

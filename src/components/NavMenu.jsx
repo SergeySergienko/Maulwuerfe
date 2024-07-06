@@ -1,18 +1,28 @@
+import { NavLink } from 'react-router-dom';
+
+const links = [
+  { path: '/', label: 'Home' },
+  { path: '/events', label: 'Events' },
+  { path: '/team', label: 'Team' },
+];
+
 const NavMenu = () => {
   return (
-    <>
-      <div className="flex items-center">
-        <div className="mr-4 transition cursor-pointer hover:text-white active:text-red-600">
-          Home
-        </div>
-        <div className="mr-4 transition cursor-pointer hover:text-white active:text-red-600">
-          Events
-        </div>
-        <div className="transition cursor-pointer hover:text-white active:text-red-600">
-          Team
-        </div>
-      </div>
-    </>
+    <div className="flex items-center">
+      {links.map((link) => (
+        <NavLink
+          key={link.path}
+          to={link.path}
+          className={({ isActive }) =>
+            isActive
+              ? 'mr-10 transition cursor-pointer text-white'
+              : 'mr-10 transition cursor-pointer hover:text-white'
+          }
+        >
+          {link.label}
+        </NavLink>
+      ))}
+    </div>
   );
 };
 
