@@ -44,27 +44,27 @@ const EventCard = ({ event }) => {
   return (
     <>
       <>
-        <h2 className="text-center font-accent tracking-widest font-bold">
-          <p className="text-4xl">{event.title}</p>
+        <h2 className='text-center font-accent tracking-widest font-bold'>
+          <p className='text-4xl'>{event.title}</p>
         </h2>
-        <p className="text-center">
-          <span className="mr-1">Place in the tournament: </span>
-          <FaTrophy className="inline pb-1 mr-1 text-red-600" />
+        <p className='text-center'>
+          <span className='mr-1'>Platz im Turnier: </span>
+          <FaTrophy className='inline pb-1 mr-1 text-red-600' />
           <span>{event.placeInTheTournament}</span>
         </p>
-        <p className="mb-4 text-center text-red-600 text-sm">
-          <FaCalendar className="inline pb-1 mr-1" />
-          <span className="mr-2">{event.date}</span>
-          <FaMapMarker className="inline pb-1" />
+        <p className='mb-4 text-center text-red-600 text-sm'>
+          <FaCalendar className='inline pb-1 mr-1' />
+          <span className='mr-2'>{event.date}</span>
+          <FaMapMarker className='inline pb-1' />
           <span>{event.place}</span>
         </p>
-        <p className="h-full opacity-60 mb-4">{event.description}</p>
+        <p className='h-full opacity-60 mb-4'>{event.description}</p>
       </>
-      <Slider ref={mainSlider} {...settingsMain} className="slider-for mb-4">
+      <Slider ref={mainSlider} {...settingsMain} className='slider-for mb-4'>
         {Array.from({ length: event.amountOfPhotos }).map((_, index) => (
           <div key={index}>
             <img
-              className="w-full h-64 sm:h-96 object-contain object-center"
+              className='w-full h-64 sm:h-96 object-contain object-center'
               src={`/events/event-${event.date}/event-${event.date}-${
                 index + 1
               }.${event.photosFormat}`}
@@ -73,7 +73,7 @@ const EventCard = ({ event }) => {
           </div>
         ))}
       </Slider>
-      <Slider ref={thumbsSlider} {...settingsThumbs} className="slider-nav">
+      <Slider ref={thumbsSlider} {...settingsThumbs} className='slider-nav'>
         {Array.from({ length: event.amountOfPhotos }).map((_, index) => (
           <div key={index} onClick={() => handleThumbnailClick(index)}>
             <div

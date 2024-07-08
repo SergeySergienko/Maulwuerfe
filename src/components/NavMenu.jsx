@@ -1,14 +1,15 @@
 import { NavLink } from 'react-router-dom';
 
-const links = [
+export const links = [
   { path: '/', label: 'Home' },
-  { path: '/events', label: 'Events' },
+  { path: '/events', label: 'Veranstaltungen' },
   { path: '/team', label: 'Team' },
+  { path: '/contacts', label: 'Kontakte' },
 ];
 
 const NavMenu = () => {
   return (
-    <div className="flex items-center">
+    <div className='flex items-center hidden lg:flex'>
       {links.map((link) => (
         <NavLink
           key={link.path}

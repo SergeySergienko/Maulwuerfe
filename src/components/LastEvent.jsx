@@ -5,7 +5,7 @@ const LastEvent = ({ lastEvent }) => {
   return (
     <section className='external-container py-10 sm:py-16 lg:py-20'>
       <h2 className='text-center font-accent tracking-widest font-bold'>
-        <p className='text-lg text-red-600'>Last event</p>
+        <p className='text-lg text-red-600'>Letzte Veranstaltung</p>
       </h2>
       <EventCard event={lastEvent} />
     </section>

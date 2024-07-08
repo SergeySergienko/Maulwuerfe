@@ -37,37 +37,40 @@ const Team = ({ teamMembers, showAllTeam = false }) => {
   };
 
   return (
-    <section className="external-container py-10 sm:py-16 lg:py-20">
+    <section className='external-container py-10 sm:py-16 lg:py-20'>
       {!showAllTeam && (
-        <h2 className="mb-4 text-center font-accent tracking-widest font-bold">
-          <p className="text-lg text-red-600">TEAM</p>
-          <p className="text-4xl">FREIBERGER MAULWÜRFE</p>
+        <h2 className='mb-4 text-center font-accent tracking-widest font-bold'>
+          <p className='text-lg text-red-600'>TEAM</p>
+          <p className='text-4xl'>FREIBERGER MAULWÜRFE</p>
         </h2>
       )}
-      <p className="mb-4">
-        Our team is comprised of a dynamic group of players, coaches, and
-        support staff who are passionate about volleyball. Whether it&apos;s
-        spiking, blocking, or strategizing, each member brings their unique
-        skills and energy to the court. Meet our amazing team and get to know
-        the individuals who make every game a thrilling experience. Stay tuned
-        for updates on our upcoming matches and events!
+      <p className='mb-4'>
+        Unser Team besteht aus einer dynamischen Gruppe von Spielern, Trainern
+        und Betreuern, die eine Leidenschaft für Volleyball haben. Ob
+        Schmetterball, Blocken oder Strategieentwicklung, jedes Mitglied bringt
+        seine einzigartigen Fähigkeiten und Energie auf das Spielfeld. Lernen
+        Sie unser großartiges Team kennen und lernen Sie die Menschen kennen,
+        die jedes Spiel zu einem spannenden Erlebnis machen. Bleiben Sie dran
+        für Updates zu unseren kommenden Spielen und Events!
       </p>
       {!showAllTeam ? (
-        <Slider {...sliderSettings} className="mb-10">
+        <Slider {...sliderSettings} className='mb-10'>
           {teamMembers.map((member, index) => (
             <TeamMemberCard key={index} teamMember={member} />
           ))}
         </Slider>
       ) : (
-        <div className="flex flex-wrap gap-8">
+        <div className='flex flex-wrap gap-8'>
           {teamMembers.map((member, index) => (
             <TeamMemberCard key={index} teamMember={member} />
           ))}
         </div>
       )}
       {!showAllTeam && (
-        <Link to="/team">
-          <button className="block btn-primary-2 mx-auto">Show all Team</button>
+        <Link to='/team'>
+          <button className='block btn-primary-2 mx-auto'>
+            Alle Teams anzeigen
+          </button>
         </Link>
       )}
     </section>

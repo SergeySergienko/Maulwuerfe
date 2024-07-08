@@ -19,8 +19,8 @@ const PastEvents = ({ pastEvents, showAllEvents = false }) => {
       <div className='external-container py-10 sm:py-16 lg:py-20'>
         {!showAllEvents && (
           <h2 className='mb-4 text-center font-accent tracking-widest font-bold'>
-            <p className='text-lg text-red-600'>Gallery of</p>
-            <p className='text-4xl'>our past events</p>
+            <p className='text-lg text-red-600'>Galerie</p>
+            <p className='text-4xl'>unserer vergangenen Veranstaltungen</p>
           </h2>
         )}
         <div className='mb-10'>
@@ -31,7 +31,7 @@ const PastEvents = ({ pastEvents, showAllEvents = false }) => {
         {!showAllEvents ? (
           <Link to='/events'>
             <button className='block btn-primary-2 mx-auto'>
-              Show all events
+              Alle Veranstaltungen anzeigen
             </button>
           </Link>
         ) : (
@@ -41,7 +41,7 @@ const PastEvents = ({ pastEvents, showAllEvents = false }) => {
                 className='block btn-primary-2 mx-auto'
                 onClick={loadMoreEvents}
               >
-                Show more events
+                Weitere Veranstaltungen anzeigen
               </button>
             </div>
           )

@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import LastEvent from '../components/LastEvent';
 import PastEvents from '../components/PastEvents';
 import Team from '../components/Team';
+import Contacts from '../components/Contacts';
 
 const HomePage = ({ data }) => {
   return (
@@ -11,6 +12,7 @@ const HomePage = ({ data }) => {
       />
       <PastEvents pastEvents={data.eventsArchive} />
       <Team teamMembers={data.teamMembers} />
+      <Contacts />
     </>
   );
 };

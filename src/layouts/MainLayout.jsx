@@ -16,20 +16,26 @@ const MainLayout = ({ upcomingEvents }) => {
     if (pathname === '/events') {
       return {
         isFullHero: false,
-        subtitle: 'Gallery of',
-        title: 'our past events',
+        subtitle: 'Galerie',
+        title: 'unserer vergangenen Veranstaltungen',
       };
     } else if (pathname === '/team') {
       return {
         isFullHero: false,
-        subtitle: 'Get to know',
-        title: 'our team',
+        subtitle: 'Triff',
+        title: 'unser team',
+      };
+    } else if (pathname === '/contacts') {
+      return {
+        isFullHero: false,
+        subtitle: '',
+        title: '',
       };
     }
   }, [pathname]);
 
   return (
-    <div className="text-main-dark">
+    <div className='text-main-dark'>
       <header>
         <Navbar />
       </header>
