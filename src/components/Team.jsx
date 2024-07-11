@@ -46,12 +46,12 @@ const Team = ({ teamMembers, showAllTeam = false }) => {
       )}
       <p className='mb-4'>
         Unser Team besteht aus einer dynamischen Gruppe von Spielern, Trainern
-        und Betreuern, die eine Leidenschaft für Volleyball haben. Ob
+        und Betreuern, die eine Leidenschaft für Volleyball teilen. Ob
         Schmetterball, Blocken oder Strategieentwicklung, jedes Mitglied bringt
         seine einzigartigen Fähigkeiten und Energie auf das Spielfeld. Lernen
-        Sie unser großartiges Team kennen und lernen Sie die Menschen kennen,
-        die jedes Spiel zu einem spannenden Erlebnis machen. Bleiben Sie dran
-        für Updates zu unseren kommenden Spielen und Events!
+        Sie unser großartiges Team und die Menschen kennen, die jedes Spiel zu
+        einem spannenden Erlebnis machen. Bleiben Sie dran für Updates zu
+        unseren kommenden Spielen und Events!
       </p>
       {!showAllTeam ? (
         <Slider {...sliderSettings} className='mb-10'>

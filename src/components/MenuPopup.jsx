@@ -15,7 +15,7 @@ const MenuPopup = ({ onClose }) => {
   return (
     <div className='fixed inset-0 z-50 backdrop-blur'>
       <nav
-        class='fixed h-72 bg-main-dark w-screen p-8'
+        className='fixed h-72 bg-main-dark w-screen p-8'
         // x-show='showSidenav'
         // x-transition:enter='transition ease-out duration-300'
         // x-transition:enter-start='-translate-x-72'

@@ -17,12 +17,12 @@ const MainLayout = ({ upcomingEvents }) => {
       return {
         isFullHero: false,
         subtitle: 'Galerie',
-        title: 'unserer vergangenen Veranstaltungen',
+        title: 'Unsere vergangenen Veranstaltungen',
       };
     } else if (pathname === '/team') {
       return {
         isFullHero: false,
-        subtitle: 'Triff',
+        subtitle: '',
         title: 'unser team',
       };
     } else if (pathname === '/contacts') {

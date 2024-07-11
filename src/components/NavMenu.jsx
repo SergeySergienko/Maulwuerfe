@@ -1,10 +1,10 @@
 import { NavLink } from 'react-router-dom';
 
 export const links = [
-  { path: '/', label: 'Home' },
+  { path: '/', label: 'Startseite' },
   { path: '/events', label: 'Veranstaltungen' },
   { path: '/team', label: 'Team' },
-  { path: '/contacts', label: 'Kontakte' },
+  { path: '/contacts', label: 'Kontakt' },
 ];
 
 const NavMenu = () => {

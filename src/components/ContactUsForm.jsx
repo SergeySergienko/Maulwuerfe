@@ -28,7 +28,7 @@ const ContactUsForm = () => {
   return (
     <div className='w-full'>
       <h2 className='mb-4 text-4xl text-red-600 font-accent'>
-        Kontaktiere uns
+        Kontaktieren Sie uns
       </h2>
       <form onSubmit={handleSubmit}>
         <div className='mb-4'>
@@ -39,7 +39,7 @@ const ContactUsForm = () => {
             type='text'
             id='name'
             className='w-full h-12 py-1 px-4 rounded-xl bg-white/10 placeholder:text-white/40 text-white focus:outline-none'
-            placeholder='Drucken Sie Ihren Namen'
+            placeholder='Geben Sie Ihren Namen ein'
             value={formData.name}
             onChange={handleChange}
             required
@@ -53,7 +53,7 @@ const ContactUsForm = () => {
             type='email'
             id='email'
             className='w-full h-12 py-1 px-4 rounded-xl bg-white/10 placeholder:text-white/40 text-white focus:outline-none'
-            placeholder='Drucken Sie Ihre E-Mail aus'
+            placeholder='Geben Sie Ihre E-Mail ein'
             value={formData.email}
             onChange={handleChange}
             required
@@ -67,7 +67,7 @@ const ContactUsForm = () => {
             id='message'
             className='w-full h-28 py-3 px-4 rounded-xl bg-white/10 placeholder:text-white/40 text-white focus:outline-none resize-none overflow-auto'
             rows='4'
-            placeholder='Drucken Sie Ihre Nachricht'
+            placeholder='Geben Sie Ihre Nachricht ein'
             value={formData.message}
             onChange={handleChange}
             required

@@ -9,7 +9,7 @@ import Upcoming from './Upcoming';
 const Hero = ({
   isFullHero = true,
   title = 'FREIBERGER MAULWÜRFE TEAM',
-  subtitle = 'WELCOME TO',
+  subtitle = 'Willkommen beim',
   upcomingEvents,
 }) => {
   const offsetX = useMotionValue(0);
@@ -103,7 +103,7 @@ const Hero = ({
           transition={{ type: 'spring', stiffness: 60, damping: 20 }}
         >
           <h1 className='mb-4 font-accent tracking-widest font-bold'>
-            <p className='text-lg text-red-600'>Willkommen zum </p>
+            <p className='text-lg text-red-600'>Willkommen beim </p>
             <p className='text-3xl text-white'>FREIBERGER MAULWÜRFE TEAM</p>
           </h1>
           <p className='hidden md:block mb-4 text-sm text-white brightness-75'>
@@ -112,7 +112,7 @@ const Hero = ({
             Spieler kennenzulernen.
           </p>
           <Link to='/team'>
-            <button className='btn-primary'>Triff das Team</button>
+            <button className='btn-primary'>Unser Team</button>
           </Link>
         </motion.div>
       </div>

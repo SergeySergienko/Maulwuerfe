@@ -20,7 +20,7 @@ const PastEvents = ({ pastEvents, showAllEvents = false }) => {
         {!showAllEvents && (
           <h2 className='mb-4 text-center font-accent tracking-widest font-bold'>
             <p className='text-lg text-red-600'>Galerie</p>
-            <p className='text-4xl'>unserer vergangenen Veranstaltungen</p>
+            <p className='text-4xl'>Unsere vergangenen Veranstaltungen</p>
           </h2>
         )}
         <div className='mb-10'>

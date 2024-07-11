@@ -198,7 +198,7 @@ const App = () => {
         date: '08.06.2024',
         title: 'Brietzer Sportplatz Cup',
         description:
-          'Das Volleyballturnier wurde vom SV Brietz 77 e.V. organiziert und fand unter freiem Himmel statt. Es bot spannende Spiele und zeigte beeindruckende sportliche Leistungen der teilnehmenden Teams. Die Zuschauer waren begeistert von der dynamischen Atmosphäre und der hervorragenden Organisation des Events. Am Ende des Tages konnten die besten Mannschaften ihre wohlverdienten Auszeichnungen entgegennehmen.',
+          'Das Volleyballturnier wurde vom SV Brietz 77 e.V. organisiert und fand unter freiem Himmel statt. Es bot spannende Spiele und zeigte beeindruckende sportliche Leistungen der teilnehmenden Teams. Die Zuschauer waren begeistert von der dynamischen Atmosphäre und der hervorragenden Organisation des Events. Am Ende des Tages konnten die besten Mannschaften ihre wohlverdienten Auszeichnungen entgegennehmen.',
         place: 'Brietz, Sportplatz',
         placeInTheTournament: 7,
         amountOfPhotos: 4,

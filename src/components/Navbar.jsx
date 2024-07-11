@@ -33,7 +33,7 @@ const Navbar = () => {
         className={`z-20 fixed top-0 left-0 right-0 w-full text-white/40 ${bgClass}`}
       >
         <div className='flex items-center justify-between h-20 external-container'>
-          <div className='flex p-1 rounded-full bg-gradient-to-r from-white/15 to-40% '>
+          <div className='flex grow justify-between p-1 rounded-full bg-gradient-to-r from-white/15 to-40% '>
             <NavLink
               className='flex flex-shrink-0 items-center mr-4 md:mr-12'
               to='/'
@@ -49,7 +49,7 @@ const Navbar = () => {
             </NavLink>
             <NavMenu />
           </div>
-          <div class='flex items-center h-12 py-1 px-4 lg:hidden'>
+          <div className='flex items-center h-12 py-1 px-4 lg:hidden'>
             <GiHamburgerMenu
               className='fill-white/90 cursor-pointer transition hover:fill-white/50'
               size={40}
