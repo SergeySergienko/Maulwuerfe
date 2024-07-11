@@ -48,7 +48,7 @@ const EventCardCover = ({ event }) => {
         </div>
         <div className='flex md:hidden lg:flex items-center shrink-0 md:pl-4 md:border-l-2'>
           <button className='btn-primary-2' onClick={openEventPopup}>
-            Mehr info
+            Mehr
           </button>
         </div>
       </div>

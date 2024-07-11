@@ -69,7 +69,7 @@ const Team = ({ teamMembers, showAllTeam = false }) => {
       {!showAllTeam && (
         <Link to='/team'>
           <button className='block btn-primary-2 mx-auto'>
-            Alle Teams anzeigen
+            Das ganze Team anzeigen
           </button>
         </Link>
       )}
